@@ -1,9 +1,9 @@
 --NOTES--
 -Basic Program Syntax-
 public class program-name {
-	optional variable delcarations and subroutines
-	public static void main(String[] args) {                      ----the main class, called by the java interpreter
-		statements go here
+	optional variable delcarations and subroutines		----optional
+	public static void main(String[] args) {		----the main class, called by the java interpreter
+		statements go here				----commands go here
 	}
-	optional variable declarations and subroutines
+	optional variable declarations and subroutines		----optional
 }
