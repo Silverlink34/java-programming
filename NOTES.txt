@@ -7,3 +7,74 @@ public class program-name {
 	}
 	optional variable declarations and subroutines		----optional
 }
+
+--Commenting--
+//		--comments are allowed till end of line, example:
+codecodecode // comments are here
+/* to */		--comments are allowed from /* to */		--not limited to end of lines
+
+--Classes--
+All Java programming is done inside classes. The program's name is a class.
+
+To define a program, you need a subroutine called "main". The definition looks like this:
+
+public static void main(String[] args) {
+[statements]
+}
+This is what is called by the interpreter. It can call other classes and subroutines, but it is essentially the start line for executing.
+public means the routine can be called from outside the program, in this case being the Java interpreter itself.
+
+The name of the first line is the name of the program, and the code has to be saved in programname.java. 
+When the programname.java is compiled, it produces programname.class. This is the program translated into Java Bytecode.
+
+The .java file is source code, it isn't needed to run the program. The .class file is the finalized file that is ran by the interpreter.
+
+--Layout--
+Layout isn't needed for the computer to read the code. You could technically have the code all on one line.
+Layout is needed for humans to read the code. You want it to be readable and look pretty.
+
+--Identifiers--
+Can be used to name classes, variables, and subroutines.
+A sequence of one or more characters. Must beegin with a letter or underscore and consist entirely of letters, digits, and underscores. NO SPACES.
+Identifiers are CASE SENSITIVE.
+Reserved identifiers are:
+class, public, static,if, else, while and more.
+--Style of identifiers
+Classes - start with uppercase letters
+variables and subroutines - start with lowercase
+Typically Java programmers dont use underscores, unless its a certain kind of variable.
+It is normal to capitalize each word in name, such as HelloWorld or interestRate. AKA Camel Case.
+-Compound names - AKA qualified names - names separated by periods.
+these names show the path to an item through one or more levels of containment. Example:
+system.out.println		--indicates system contains out and out contains println.
+
+--Variables--
+The ONLY way to get data into a variable is an assignment statement. Example:
+variable = string;
+--Types of variables
+Java has specific types of variables for specific data: (AKA strongly typed)
+-Integer Variables
+byte- represents 1 byte (8bits), can contain integers -128 to 127.
+short- represents 2 bytes(16bits), integers -32768 to 32767. 
+int- represents 4 bytes(32bits), integers -2147483648 to 2147483647. This is the preferred integer variable type.
+long- represents 8 bytes(64bits), integers -9223372036854775808 to 9223372036854775807.
+-Real Numbers like 32.4
+float- represents 4 bytes, can store about 7 significant digits, anything larger needs to be rounded off to work.
+double- represents 8 bytes, can store about 15 significant digits. This is the preferred real number variable type.
+
+char- single character from Unicode character set. Can also be a special character such as carriage return or newline. Uses 2 bytes in memory and can be used like integers in some situations.
+boolean- true or false
+
+-Literals in variables
+literals are "literal" characters specified. They are defined by single quotes. For example setting * as a char variable: (normally it would be a multiplication operator without the single quotes)
+ch = '*';
+-Special literals
+use a backslash along with the single quotes. Examples:
+'\t'	-tab	'\r'	-carriage return	'\n'	-linefeed	'\''	-a literal single quote (single quote, backslash,single quote, single quote)	'\\'	-a literal backslash
+-Numeric literals
+exponential form:
+'1.3e12'	--1.3 times 10 to the power of 12
+'1.3e-12'	--1.3 times 10 to the power of -12
+
+Any numerical literal with decimal or exponent is a double type. to make a literal float, you need to append F or f to the end of number.
+You cannot assign a double value to a float value.
