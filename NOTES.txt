@@ -155,3 +155,68 @@ The interest earned is $(interest) -- interest is on same line because of system
 These are subroutine call statements. The parameters are enclosed in parenthesis. If a subroutine call statement has no parameters, it needs empty parenthesis.
 
 --Strings, Classes, Objects and Subroutines
+Values of strings are actually objects.
+-Subroutines
+Subroutines are contained in either a class or an object.
+String values have built in subroutines that are used to manipulate the value.
+
+-Subroutines in Classes
+One of the purposes of a class is to group together some variables and subroutines, which are contained in that class.
+These variables and subroutines are called static members. The main() routine is a static member of the class.
+The word static marks a static member.
+
+When a class contains a static variable or subroutine, the name of the class is part of the full name of the variable or subroutine. Example:
+Class is called System. System contains a subroutine caled Exit. Exit expects an integer for a parameter. To use system's subroutine, you use a period:
+System.exit(0);
+This will terminate the program and shut down the Java Virtual Machine. Parameter 0 means a clean, normal exit. Any other number can be used to identify an error for closing.
+
+Another example of a class is Math. Math has variables Math.PI and Math.E (value of PI and e). Math also has several functions. 
+A function is a subroutine that is used to return a value that is used by the program somehow.
+
+Functions will return a value, but an action needs to be specified to tell the program what to do with the value. For example, this function will find the square root of x:
+Math.sqrt(x);
+
+But it needs to be used by the program to do anything. The following shows examples of what to do with the math function:
+System.out.print( Math.sqrt(x) ); // Display the square root of x.
+lengthOfSide = Math.sqrt(x); //Store square root inside of a variable.
+
+System.currentTimeMillis() will record the current time in milliseconds since a standardized base time. It is used to see how long a program runs.
+You can use it at the beginning and end of a task and subtract the difference.
+
+Here is an example program that does some mathematical computations and then displays how long it took to do it.
+
+/**
+* This program performs some mathematical computations and displays the
+* results. It also displays the value of the constant Math.PI. It then
+* reports the number of seconds that the computer spent on this task.
+*/
+public class TimedComputation {
+public static void main(String[] args) {
+long startTime; // Starting time of program, in milliseconds.
+long endTime; // Time when computations are done, in milliseconds.
+double time; // Time difference, in seconds.
+startTime = System.currentTimeMillis();
+double width, height, hypotenuse; // sides of a triangle
+width = 42.0;
+height = 17.0;
+hypotenuse = Math.sqrt( width*width + height*height );
+System.out.print("A triangle with sides 42 and 17 has hypotenuse ");
+System.out.println(hypotenuse);
+System.out.println("\nMathematically, sin(x)*sin(x) + "
++ "cos(x)*cos(x) - 1 should be 0.");
+System.out.println("Let’s check this for x = 1:");
+System.out.print(" sin(1)*sin(1) + cos(1)*cos(1) - 1 is ");
+System.out.println( Math.sin(1)*Math.sin(1)
++ Math.cos(1)*Math.cos(1) - 1 );
+System.out.println("(There can be round-off errors when"
++ " computing with real numbers!)");
+System.out.print("\nHere is a random number: ");
+System.out.println( Math.random() );
+System.out.print("The value of Math.PI is ");
+System.out.println( Math.PI );
+endTime = System.currentTimeMillis();
+time = (endTime - startTime) / 1000.0;
+System.out.print("\nRun time in seconds was: ");
+System.out.println(time);
+} // end main()
+} // end class TimedComputation
