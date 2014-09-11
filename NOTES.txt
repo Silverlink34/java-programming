@@ -65,7 +65,7 @@ double- represents 8 bytes, can store about 15 significant digits. This is the p
 char- single character from Unicode character set. Can also be a special character such as carriage return or newline. Uses 2 bytes in memory and can be used like integers in some situations.
 boolean- true or false
 
--Literals in variables
+--Literals in variables
 literals are "literal" characters specified. They are defined by single quotes. For example setting * as a char variable: (normally it would be a multiplication operator without the single quotes)
 ch = '*';
 -Special literals
@@ -75,6 +75,83 @@ use a backslash along with the single quotes. Examples:
 exponential form:
 '1.3e12'	--1.3 times 10 to the power of 12
 '1.3e-12'	--1.3 times 10 to the power of -12
-
-Any numerical literal with decimal or exponent is a double type. to make a literal float, you need to append F or f to the end of number.
+-Any numerical literal with decimal or exponent is a double type. to make a literal float, you need to append F or f to the end of number.
 You cannot assign a double value to a float value.
+-A literal long variable can be assigned by adding L as a suffix. Example:
+17L or 72847687436L.
+-Octal and Hexadecimal literals are allowed as well.
+Octal uses digits 0 -7. They are represented by beginning a number with 0.
+Hexadecimal uses digits 0 - 9, and letters A B C D E F. Not case sensitive. Letters represent numbers 10 - 15. Hex variables begin with 0x or 0X.
+Binary literals begin with 0b or 0B and contain only digits 1 or 0.
+-In Java 7 underscores can be used to separate groups of digits, such as 7_000_000_000.
+-Boolean variable literals are only true or false. They are values.
+Boolean values can also be assigned to variables of type boolean. Example: both assignment statements are legal.
+test = true;
+test = rate > 0.05;
+
+--Strings and String Literals
+Strings have to be enclosed in double quotes. An empty string is just two double quotes with nothing in between them.
+--NOTE--
+double quotes are used for string literals, and single quotes for char literals.
+A backslash can escape special characters in a string literal.
+The following string is an example of this: I said, "Are you listening!"
+"I said, \"Are you listening!\""
+
+--Variables in Programs
+Variables must be declared to be used. This is done with a variable declaration statement.
+The syntax is:
+variabletype variableNameOrNames
+int numberOfStudents;
+String name;
+double x, y;
+boolean isFinished;
+char firstInitial, middleInitial, lastInitial;
+-Style note-
+It is good practice to only assign one variable in each statement, unless they are closely related.
+Also it helps to comment the statements on their lines.
+
+Variables declared in a subroutine are called local variables for that subroutine. The variable needs to be declared before it is used.
+-Style Note-
+You can declare important variables at beggining of subroutine and comment. Use "utility variables" which are not important to overall logic of subroutine at the point they are first used.
+
+A basic program example with variable declarations:
+
+/**
+* This class implements a simple program that
+* will compute the amount of interest that is
+* earned on $17,000 invested at an interest
+* rate of 0.027 for one year. The interest and
+* the value of the investment after one year are
+* printed to standard output.
+*/
+public class Interest {
+public static void main(String[] args) {
+/* Declare the variables. */
+double principal; // The value of the investment.
+double rate; // The annual interest rate.
+double interest; // Interest earned in one year.
+/* Do the computations. */
+principal = 17000;
+rate = 0.027;
+interest = principal * rate; // Compute the interest.
+principal = principal + interest;
+// Compute value of investment after one year, with interest.
+// (Note: The new value replaces the old value of principal.)
+/* Output the results. */
+System.out.print("The interest earned is $");
+System.out.println(interest);
+System.out.print("The value of the investment after one year is $");
+System.out.println(principal);
+} // end of main()
+} // end of class Interest
+
+Explanation of subroutines:
+system.out.print - prints information in the parenthesis and does NOT produce a linefeed after
+system.out.println - prints  information in parenthesis and prints a linefeed after
+
+So, The output would look like:
+The interest earned is $(interest) -- interest is on same line because of system.out.print.
+
+These are subroutine call statements. The parameters are enclosed in parenthesis. If a subroutine call statement has no parameters, it needs empty parenthesis.
+
+--Strings, Classes, Objects and Subroutines
