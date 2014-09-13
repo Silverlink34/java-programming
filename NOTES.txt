@@ -220,3 +220,9 @@ System.out.print("\nRun time in seconds was: ");
 System.out.println(time);
 } // end main()
 } // end class TimedComputation
+
+-Classes and Objects-
+Classes can be containers for static variables and subroutines, but they also can 
+describe objects. 
+
+Every object has a class that defines it.
